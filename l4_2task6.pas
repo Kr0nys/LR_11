@@ -1,5 +1,5 @@
-﻿uses graphABC;
-var i,x1,x2,y1,y2,N: integer;
+uses graphABC;
+var i,x1,x2,y1,y2,N,a,b,j,k,l,m: integer;
 h,x,y: real;
 begin
   x1:= 100; y1:=100;
@@ -15,4 +15,20 @@ begin
     x:=x+h;
     y:=y+h;
   end;
+  l:=120;
+  m:=140;
+  for k:=1 to 4 do begin
+     a:=140;
+     b:=120;
+    for i:=1 to 4 do begin
+    floodfill(l,b,clblack);
+    b:=b+50;
+    end;
+    for j:=1 to 4 do begin
+      floodfill(m,a,clblack);
+      a:=a+50;
+    end;
+    l:=l+50;
+    m:=m+50;
+    end;
 end.
